@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styleArenaTest.css">
+    <script src="../static/codeArena.js" defer></script>
+    <title>Arena</title>
+
+</head>
+
+<body>
+    <a href="/"><button>Retour</button></a>
+    <button id="changeTurnButton">Change Turn</button>
+
+    <p>Lancer la partie : <button id="fetchCharactersForArena">Start Game</button></p>
+
+    <p id="arrowEnemy">➔</p><p id="enemyTeamTxt">ÉQUIPE ADVERSE</p>
+    <div class="donnees center-horizontal" id="charactersArenaEnemy" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <table id="characterArenaEnemy"></table>
+    </div>
+
+    <p id="arrowFriend">➔</p><p id="myTeamTxt">Mon ÉQUIPE</p>
+    <div class="donnees center-horizontal" id="charactersArenaPlayer" ondrop="drop(event)"
+        ondragover="allowDrop(event)">
+        <table id="characterArenaPlayer"></table>
+    </div>
+
+
+</body>
+
+</html>

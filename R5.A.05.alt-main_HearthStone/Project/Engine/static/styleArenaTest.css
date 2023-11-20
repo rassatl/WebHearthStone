@@ -1,0 +1,251 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("../static/plateau_test.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.donnees, #all {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#characterTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    display: flex;
+}
+
+#characterTable td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    padding-right: 1rem;
+}
+
+#characterArena {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    display: flex;
+}
+
+#characterArena td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    padding-right: 1rem;
+}
+
+#characterArenaEnemy, #characterArenaPlayer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#charactersArenaEnemy {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#charactersArenaPlayer {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-right: 1rem;
+    width: 200px;
+    color: black;
+}
+
+.card-inner {
+    padding: 20px;
+}
+
+.card img {
+    width: 80px;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+.card {
+    position: relative;
+    width: 130px;
+    height: fit-content;
+    color: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+  }
+  
+  .card::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    border-radius: 1.2em;
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    filter: blur(30px);
+  }
+  
+  .card span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    border-radius: 1em;
+  }
+  
+  .card span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .card .card-inner {
+    position: relative;
+    padding: 10px;
+    z-index: 10;
+    text-align: center;
+    font-weight: 600;
+}
+
+#enemyTeamTxt{
+    position: absolute;
+    top: 430px;
+    left:420px;
+    font-family: "LHF Uncial Caps";
+    color: rgb(255, 0, 0);
+}
+#arrowEnemy{
+    position: absolute;
+    top: 430px;
+    left: 380px;
+    font-family: "LHF Uncial Caps";
+    color: rgb(255, 0, 0);
+}
+
+#myTeamTxt{
+    position: absolute;
+    top: 530px;
+    left:420px;
+    font-family: "LHF Uncial Caps";
+    color: rgb(81, 255, 0);
+}
+#arrowFriend{
+    position: absolute;
+    top: 530px;
+    left: 380px;
+    font-family: "LHF Uncial Caps";
+    color: rgb(81, 255, 0);
+}
+
+#changeTurnButton {
+    position: absolute;
+    background-color: rgb(226, 226, 57);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 1rem;
+    top: 475px;
+    right: 308px;
+    font-family: "LHF Uncial Caps";
+}
+
+@font-face {
+    font-family: "LHF Uncial Caps";
+    src: url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.eot");
+    src: url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.eot?#iefix") format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.woff") format("woff"),
+         url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.ttf") format("truetype"),
+         url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.svg#LHF Uncial Caps") format("svg");
+}
