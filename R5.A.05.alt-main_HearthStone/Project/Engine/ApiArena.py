@@ -9,7 +9,7 @@ import http.client
 
 app = Flask(__name__)
 
-# Fonctions utilitaires
+# Fonctions utilitairesz
 @app.route('/')
 def index():
     return render_template('index.html')
