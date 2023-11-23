@@ -8,8 +8,8 @@ document.getElementById('fetchCharactersForArena').addEventListener('click', fun
     fetch('/characterss')
         .then(response => response.json())
         .then(charactersList => {
-            const characterTablePlayer = document.getElementById('characterArenaPlayer');
-            const characterTableEnemy = document.getElementById('characterArenaEnemy');
+            const characterTablePlayer = document.getElementById('ally_trey');
+            const characterTableEnemy = document.getElementById('ennemy_trey');
             characterTableEnemy.innerHTML = "";
             characterTablePlayer.innerHTML = "";
 
@@ -18,6 +18,8 @@ document.getElementById('fetchCharactersForArena').addEventListener('click', fun
                     const characterInfo = charactersList[characterId];
                     const characterElement = document.createElement('div');
                     characterElement.classList.add('card');
+                    characterElement.classList.add('h-full');
+                    characterElement.classList.add('w-[7vw]');
                     characterElement.dataset.teamId = characterInfo.teamId;
                     characterElement.dataset.life = characterInfo.life;
                     characterElement.dataset.strength = characterInfo.strength;

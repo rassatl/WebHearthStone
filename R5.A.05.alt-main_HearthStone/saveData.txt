@@ -62,3 +62,41 @@
         }
     }
 }
+
+<!-- <body>
+    <!-- <button id="changeTurnButton">Change Turn</button> -->
+    
+    <!-- <p>Lancer la partie : <button id="fetchCharactersForArena">Start Game</button></p> -->
+    
+    <!-- <p id="arrowEnemy">➔</p><p id="enemyTeamTxt">ÉQUIPE ADVERSE</p> -->
+    <div class="donnees center-horizontal" id="charactersArenaEnemy" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <table id="characterArenaEnemy"></table>
+    </div>
+    
+    <!-- <p id="arrowFriend">➔</p><p id="myTeamTxt">Mon ÉQUIPE</p> -->
+    <div class="donnees center-horizontal" id="charactersArenaPlayer" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <table id="characterArenaPlayer"></table>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <a href="/"><button>Retour</button></a>
+        <section style="display: grid; grid-template-rows: repeat(2, 1fr); width: 60vw; height: 50vh;">
+            <div style="background-color: #ff0000; width: 100%; display: grid; grid-template-columns: repeat(8, 1fr); gap: 1%; padding: 1%;">
+                <div class="cellulerouge"></div>
+                <div class="cellulerouge"></div>
+                <div class="cellulerouge"></div>
+                <div class="cellulerouge"></div>
+                <div class="cellulerouge"></div>
+                <div class="cellulerouge"></div>
+            </div>
+            <div style="background-color: #00ff00; width: 100%; display: grid; grid-template-columns: repeat(8, 1fr); gap: 1%; padding: 1%;">
+                <div class="celluleblue"></div>
+                <div class="celluleblue"></div>
+                <div class="celluleblue"></div>
+                <div class="celluleblue"></div>
+                <div class="celluleblue"></div>
+                <div class="celluleblue"></div>
+            </div>
+        </section>
+    </div>
+
+</body> -->

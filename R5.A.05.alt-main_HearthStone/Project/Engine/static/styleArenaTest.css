@@ -230,13 +230,9 @@ form {
 }
 
 #changeTurnButton {
-    position: absolute;
     background-color: rgb(226, 226, 57);
     color: rgb(0, 0, 0);
     font-weight: 600;
-    font-size: 1rem;
-    top: 475px;
-    right: 308px;
     font-family: "LHF Uncial Caps";
 }
 
@@ -248,4 +244,12 @@ form {
          url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.woff") format("woff"),
          url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.ttf") format("truetype"),
          url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.svg#LHF Uncial Caps") format("svg");
+}
+
+
+.celluleblue{
+    background-color: blue;
+}
+.cellulerouge{
+    background-color: red;
 }

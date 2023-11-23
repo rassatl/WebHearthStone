@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartstone</title>
     <link rel="stylesheet" href="../static/styleArenaTest.css">
     <script src="../static/codeArena.js" defer></script>
-    <title>Arena</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <a href="/"><button>Retour</button></a>
-    <button id="changeTurnButton">Change Turn</button>
+<body class=" flex justify-center items-center h-screen">
+    <button id="fetchCharactersForArena" class="absolute top-0 left-0 m-[1vh] h-[2vh] w-[5vw] text-[1vh]">Start Game</button>
+    <section class="relative grid grid-rows-2 h-[50vh] w-[60vw]">
+        <div class="absolute bg-yellow-500 h-[5vh] w-[11vw] right-[-5vw] top-[45%]"><button id="changeTurnButton" class="w-full h-full text-[2vh] p-[1%]">Change Turn</button></div>
+        
 
-    <p>Lancer la partie : <button id="fetchCharactersForArena">Start Game</button></p>
-
-    <p id="arrowEnemy">➔</p><p id="enemyTeamTxt">ÉQUIPE ADVERSE</p>
-    <div class="donnees center-horizontal" id="charactersArenaEnemy" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <table id="characterArenaEnemy"></table>
-    </div>
-
-    <p id="arrowFriend">➔</p><p id="myTeamTxt">Mon ÉQUIPE</p>
-    <div class="donnees center-horizontal" id="charactersArenaPlayer" ondrop="drop(event)"
-        ondragover="allowDrop(event)">
-        <table id="characterArenaPlayer"></table>
-    </div>
-
-
+        <div id="ennemy_trey" class="bg-red-500 w-full flex justify-center gap-[1%] p-[1%] flex-nowrap">
+            <!--<div class="bg-blue-500 h-full w-[7vw]"></div>
+             <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div> -->
+        </div>
+        <div id="ally_trey" class="bg-green-500 w-full flex justify-center gap-[1%] p-[1%] flex-nowrap">
+            <!-- <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div>
+            <div class="bg-blue-500 h-full w-[7vw]"></div> -->
+        </div>
+    </section>
 </body>
+
+
 
 </html>
