@@ -51,7 +51,6 @@ document.getElementById('fetchCharactersForArena').addEventListener('click', fun
                             Speed: ${characterInfo.speed}
                         </div>
                     </div>`;
-
                     if (characterInfo.teamId == 1) {
                         characterTablePlayer.appendChild(characterElement);
                     } else {
@@ -66,6 +65,7 @@ document.getElementById('fetchCharactersForArena').addEventListener('click', fun
                         arrowEnemyElement.style.visibility = 'visible';
                         arrowFriendElement.style.visibility = 'hidden';
                     }
+
                 }
             }
         })

@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-image: url("../static/plateau_test.jpg");
-    background-size: cover;
+    width: 100vw;
     background-repeat: no-repeat;
     color: white;
     margin: 0;
@@ -18,19 +18,6 @@ h1 {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
-
-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #2980b9;
 }
 
 form {
@@ -124,7 +111,7 @@ form {
 }
 
 .card img {
-    width: 80px;
+    width: 80%;
     height: fit-content;
     border-radius: 5px;
 }
@@ -135,8 +122,6 @@ form {
 
 .card {
     position: relative;
-    width: 130px;
-    height: fit-content;
     color: #fff;
     transition: 0.5s;
     cursor: pointer;
@@ -195,42 +180,41 @@ form {
     position: relative;
     padding: 10px;
     z-index: 10;
-    text-align: center;
     font-weight: 600;
+    font-size: 100%;
 }
 
 #enemyTeamTxt{
     position: absolute;
-    top: 430px;
-    left:420px;
+    top: 14vh;
+    left: 2vw;
     font-family: "LHF Uncial Caps";
     color: rgb(255, 0, 0);
 }
 #arrowEnemy{
     position: absolute;
-    top: 430px;
-    left: 380px;
+    top: 14vh;
+    left: 0vw;
     font-family: "LHF Uncial Caps";
     color: rgb(255, 0, 0);
 }
 
 #myTeamTxt{
     position: absolute;
-    top: 530px;
-    left:420px;
+    top: 19vh;
+    left: 2vw;
     font-family: "LHF Uncial Caps";
     color: rgb(81, 255, 0);
 }
 #arrowFriend{
     position: absolute;
-    top: 530px;
-    left: 380px;
+    top: 19vh;
+    left: 0vw;
     font-family: "LHF Uncial Caps";
     color: rgb(81, 255, 0);
 }
 
 #changeTurnButton {
-    background-color: rgb(226, 226, 57);
     color: rgb(0, 0, 0);
     font-weight: 600;
     font-family: "LHF Uncial Caps";

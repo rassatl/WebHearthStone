@@ -14,13 +14,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class=" flex justify-center items-center h-screen">
-    <button id="fetchCharactersForArena" class="absolute top-0 left-0 m-[1vh] h-[2vh] w-[5vw] text-[1vh]">Start Game</button>
-    <section class="relative grid grid-rows-2 h-[50vh] w-[60vw]">
-        <div class="absolute bg-yellow-500 h-[5vh] w-[11vw] right-[-5vw] top-[45%]"><button id="changeTurnButton" class="w-full h-full text-[2vh] p-[1%]">Change Turn</button></div>
-        
+<body class=" flex justify-center items-center h-[94vh]">
+    <img src="../static/plateau_test.jpg" alt="" class="absolute top-0 left-0 h-screen w-screen object-fil">
+    <button id="fetchCharactersForArena" class="absolute top-0 left-0 m-[1vh] h-[2vh] w-[5vw] text-[1vh]">Start
+        Game</button>
+    <section class="relative grid grid-rows-2 h-[35vh] w-[60vw]">
+        <div class="absolute bg-yellow-500 h-[5vh] w-[11vw] right-[-5vw] top-[45%]"><button id="changeTurnButton"
+                class="w-full h-full text-[2vh] p-[1%]">Change Turn</button></div>
+        <p id="arrowEnemy">➔</p>
+        <p id="enemyTeamTxt">ÉQUIPE ADVERSE</p>
 
-        <div id="ennemy_trey" class="bg-red-500 w-full flex justify-center gap-[1%] p-[1%] flex-nowrap">
+        <p id="arrowFriend">➔</p>
+        <p id="myTeamTxt">Mon ÉQUIPE</p>
+        <div id="ennemy_trey" class="bg-red-500 opacity-50 w-full flex justify-center gap-[1%] p-[1%] flex-nowrap"
+            ondrop="drop(event)" ondragover="allowDrop(event)">
             <!--<div class="bg-blue-500 h-full w-[7vw]"></div>
              <div class="bg-blue-500 h-full w-[7vw]"></div>
             <div class="bg-blue-500 h-full w-[7vw]"></div>
@@ -30,7 +37,8 @@
             <div class="bg-blue-500 h-full w-[7vw]"></div>
             <div class="bg-blue-500 h-full w-[7vw]"></div> -->
         </div>
-        <div id="ally_trey" class="bg-green-500 w-full flex justify-center gap-[1%] p-[1%] flex-nowrap">
+        <div id="ally_trey" class="bg-green-500 opacity-50 w-full flex justify-center gap-[1%] p-[1%] flex-nowrap"
+            ondrop="drop(event)" ondragover="allowDrop(event)">
             <!-- <div class="bg-blue-500 h-full w-[7vw]"></div>
             <div class="bg-blue-500 h-full w-[7vw]"></div>
             <div class="bg-blue-500 h-full w-[7vw]"></div>

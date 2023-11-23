@@ -100,3 +100,14 @@
     </div>
 
 </body> -->
+
+
+const arrowEnemyElement = document.getElementById('arrowEnemy');
+                    const arrowFriendElement = document.getElementById('arrowFriend');
+                    if (playerGameTeamId == 1) {
+                        arrowEnemyElement.style.visibility = 'hidden';
+                        arrowFriendElement.style.visibility = 'visible';
+                    } else {
+                        arrowEnemyElement.style.visibility = 'visible';
+                        arrowFriendElement.style.visibility = 'hidden';
+                    }
