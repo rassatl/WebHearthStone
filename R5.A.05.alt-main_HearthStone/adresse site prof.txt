@@ -1,1 +1,16 @@
 https://milowb.github.io/R5A05.html#
+
+Version 1 du hearthstone :
+
+
+Au start :
+    1 - Récupère un deck aléatoire pour chaque joueur. 
+    2 - Chaques joueurs aura au début de partie 3 cartes aléatoire dans sa main.
+    3 - Chaques joueurs se vera attribué une nombre de cristaux en début de partie et celui-ci augmentera en même temps que les niveaux.
+    4 - Un des joueurs sera sélectionner pour commencer la partie.
+    5 - Une fois sont tour fini, il cliquera sur le bouton "CHANGE TURN" pour donner la main à son adversaire.
+
+Une fois la partie lancé :
+    1 - Lors du tour de chaques joueurs, celui-ci pourra placer des cartes sur son côté de plateau de jeu.
+    2 - Le nombre de cartes placable sur le plateau de jeu dépendera du nombre de cristaux que le joueurs aura.
+

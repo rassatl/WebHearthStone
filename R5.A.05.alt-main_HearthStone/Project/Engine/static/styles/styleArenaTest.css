@@ -1,13 +1,3 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-image: url("../static/plateau_test.jpg");
-    width: 100vw;
-    background-repeat: no-repeat;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
 
 h1 {
     text-align: center;
@@ -24,7 +14,8 @@ form {
     margin-top: 20px;
 }
 
-.donnees, #all {
+.donnees,
+#all {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -58,7 +49,8 @@ form {
     padding-right: 1rem;
 }
 
-#characterArenaEnemy, #characterArenaPlayer{
+#characterArenaEnemy,
+#characterArenaPlayer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -95,103 +87,15 @@ form {
     border-radius: 10px;
 }
 
-.card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    margin-right: 1rem;
-    width: 200px;
-    color: black;
-}
-
-.card-inner {
-    padding: 20px;
-}
-
-.card img {
-    width: 80%;
-    height: fit-content;
-    border-radius: 5px;
-}
-
-.clear {
-    clear: both;
-}
-
-.card {
-    position: relative;
-    color: #fff;
-    transition: 0.5s;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-  }
-  
-  .card:hover {
-    transform: translateY(-20px);
-  }
-  
-  .card::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, #ffbc00, #ff0058);
-    border-radius: 1.2em;
-  }
-  
-  .card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #ffbc00, #ff0058);
-    filter: blur(30px);
-  }
-  
-  .card span {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    right: 6px;
-    bottom: 6px;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 2;
-    border-radius: 1em;
-  }
-  
-  .card span::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .card .card-inner {
-    position: relative;
-    padding: 10px;
-    z-index: 10;
-    font-weight: 600;
-    font-size: 100%;
-}
-
-#enemyTeamTxt{
+#enemyTeamTxt {
     position: absolute;
     top: 14vh;
     left: 2vw;
     font-family: "LHF Uncial Caps";
     color: rgb(255, 0, 0);
 }
-#arrowEnemy{
+
+#arrowEnemy {
     position: absolute;
     top: 14vh;
     left: 0vw;
@@ -199,14 +103,15 @@ form {
     color: rgb(255, 0, 0);
 }
 
-#myTeamTxt{
+#myTeamTxt {
     position: absolute;
     top: 19vh;
     left: 2vw;
     font-family: "LHF Uncial Caps";
     color: rgb(81, 255, 0);
 }
-#arrowFriend{
+
+#arrowFriend {
     position: absolute;
     top: 19vh;
     left: 0vw;
@@ -224,16 +129,94 @@ form {
     font-family: "LHF Uncial Caps";
     src: url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.eot");
     src: url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.eot?#iefix") format("embedded-opentype"),
-         url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.woff2") format("woff2"),
-         url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.woff") format("woff"),
-         url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.ttf") format("truetype"),
-         url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.svg#LHF Uncial Caps") format("svg");
+        url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.woff2") format("woff2"),
+        url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.woff") format("woff"),
+        url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.ttf") format("truetype"),
+        url("https://db.onlinewebfonts.com/t/39e7483507205b9a341824a8c21d4a7d.svg#LHF Uncial Caps") format("svg");
 }
 
 
-.celluleblue{
+.celluleblue {
     background-color: blue;
 }
-.cellulerouge{
+
+.cellulerouge {
     background-color: red;
+} */
+
+html,
+body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-image: url("../static/plateau_test.jpg");
+    width: 100vw;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 94vh;
+}
+#fetchCharactersForArena{
+    color: white;
+    background-color: green;
+}
+
+body {
+    cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/hearthstone-cursor.png) 10 2, auto;
+    overflow: hidden;
+}
+
+body:active {
+    cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/hearthstone-click.png) 10 2, auto;
+}
+
+body:after {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.card {
+    color:white;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    perspective: 400px;
+    position: absolute;
+    transform-style: preserve-3d;
+    will-change: transform;
+    width: 250px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.card:active {
+    cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/hearthstone-grab.png) 10 2, auto;
+}
+
+.card-image {
+    display: block;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    width: 100%;
+    will-change: transform;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }

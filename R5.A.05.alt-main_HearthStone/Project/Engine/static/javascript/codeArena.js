@@ -1,5 +1,5 @@
-let url_img_character = "../static/img_character.PNG";
-let url_img_character2 = "../static/img_character2.PNG";
+let url_img_character = "../static/img/img_character.PNG";
+let url_img_character2 = "../static/img/img_character2.PNG";
 
 let playerGameTeamId = 1;
 let isPlayerTurn = true;
@@ -25,7 +25,7 @@ document.getElementById('fetchCharactersForArena').addEventListener('click', fun
                     characterElement.dataset.strength = characterInfo.strength;
                     characterElement.dataset.armor = characterInfo.armor;
                     characterElement.dataset.speed = characterInfo.speed;
-                    
+
                     characterElement.draggable = isPlayerTurn;
                     characterElement.addEventListener('dragstart', dragstart);
                     // let imgAleatoir;
@@ -34,23 +34,30 @@ document.getElementById('fetchCharactersForArena').addEventListener('click', fun
                     // } else {
                     //     imgAleatoir = url_img_character2;
                     // }
-                    characterElement.innerHTML = `
-                    <span></span>
-                    <div class="card-inner">
-                        <div class="character-container">
-                            <img src="${url_img_character}" alt="Image of character"
-                                data-character-id="${characterId}"
-                                data-team-id="${characterInfo.teamId}"
-                                data-life="${characterInfo.life}"
-                                data-strength="${characterInfo.strength}"
-                                data-armor="${characterInfo.armor}"
-                                data-speed="${characterInfo.speed}"><br>
-                            Life: ${characterInfo.life}<br>
-                            Strength: ${characterInfo.strength}<br>
-                            Armor: ${characterInfo.armor}<br>
-                            Speed: ${characterInfo.speed}
-                        </div>
-                    </div>`;
+
+                    // characterElement.innerHTML = `
+                    // <div class="card">
+                    //     <img src="../static/theUltimateCard.png" class="card-image" draggable="false">
+                    //     <p>aze</p>
+                    // </div>`;
+                    
+                    // characterElement.innerHTML = `
+                    // <span></span>
+                    // <div class="card-inner">
+                    //     <div class="character-container">
+                    //         <img src="${url_img_character}" alt="Image of character"
+                    //             data-character-id="${characterId}"
+                    //             data-team-id="${characterInfo.teamId}"
+                    //             data-life="${characterInfo.life}"
+                    //             data-strength="${characterInfo.strength}"
+                    //             data-armor="${characterInfo.armor}"
+                    //             data-speed="${characterInfo.speed}"><br>
+                    //         Life: ${characterInfo.life}<br>
+                    //         Strength: ${characterInfo.strength}<br>
+                    //         Armor: ${characterInfo.armor}<br>
+                    //         Speed: ${characterInfo.speed}
+                    //     </div>
+                    // </div>`;
                     if (characterInfo.teamId == 1) {
                         characterTablePlayer.appendChild(characterElement);
                     } else {

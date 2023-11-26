@@ -11,12 +11,8 @@ app = Flask(__name__)
 
 # Fonctions utilitaires
 @app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/arena1')
 def arena():
-    return render_template('arena1.html')
+    return render_template('arena.html')
 
 def load_data():
     with open('./gamesData.json') as json_file:
@@ -165,88 +161,6 @@ def update_character_data():
     except Exception as e:
         print("Error:", e)
         return jsonify({'success': False, 'error': 'Internal Server Error'}), 500
-
-
-
-#----------------------------------------------------------------------------
-@app.route('/addtoArena', methods=['POST'])
-def add_character_to_arena_TEST():
-    data = load_data()
-    character_id = request.form['character']
-    arena_id = request.form['arena']
-    if arena_id not in data["arenasList"]:
-        abort(404, "Arène non trouvée")
-    # cherche si le personnage est dans une liste d'arène
-    for arena in data["arenasList"]:
-        if character_id in arena["characters"]:
-            abort(400, "Personnage déjà dans une arène")
-    data["arenasList"][arena_id]["characters"].append(character_id)
-    write_data(data)
-    return render_template('index.html'), 200
-
-@app.route('/addData/arenas/<arena_id>/characters/<character_id>', methods=['POST'])
-def add_character_to_arena(arena_id, character_id):
-    data = load_data()
-    if arena_id not in data["arenas"]:
-        abort(404, "Arène non trouvée")
-    if character_id not in data["characters"]:
-        abort(404, "Personnage non trouvé")
-    if character_id in data["arenas"][arena_id]["characters"]:
-        abort(400, "Personnage déjà dans l'arène")
-    if len(data["arenas"][arena_id]["characters"]) >= data["arenas"][arena_id]["capacity"]:
-        abort(400, "Arène pleine")
-    data["arenas"][arena_id]["characters"].append(character_id)
-    write_data(data)
-    return jsonify(data), 200
-
-# Routes delete de l'API
-@app.route('/deleteData/arenas/<arena_id>/characters/<character_id>', methods=['DELETE'])
-def delete_character_from_arena(arena_id, character_id):
-    data = load_data()
-    if arena_id not in data["arenas"]:
-        abort(404, "Arène non trouvée")
-    if character_id not in data["characters"]:
-        abort(404, "Personnage non trouvé")
-    if character_id not in data["arenas"][arena_id]["characters"]:
-        abort(400, "Personnage non dans l'arène")
-    data["arenas"][arena_id]["characters"].remove(character_id)
-    write_data(data)
-    return jsonify(data), 200
-
-#
-# # Choisir une cible pour un personnage
-# @app.route('/arenas/<arena_id>/characters/<character_id>/chooseTarget', methods=['PUT'])
-# def choose_target(arena_id, character_id):
-#     if arena_id not in arenas:
-#         return jsonify({"error": "Arène non trouvée"}), 404
-
-#     if character_id not in arenas[arena_id]["characters"]:
-#         return jsonify({"error": "Personnage non trouvé dans l'arène"}), 404
-
-#     target_id = request.json.get('target_id')
-#     if target_id not in arenas[arena_id]["characters"]:
-#         return jsonify({"error": "Cible non trouvée dans l'arène"}), 404
-
-#     # Enregistrer la cible choisie pour le personnage
-#     characters[character_id]["target"] = target_id
-#     return jsonify({"message": "Cible choisie"}), 200
-
-# # Choisir l'action d'un personnage
-# @app.route('/arenas/<arena_id>/characters/<character_id>/chooseAction', methods=['PUT'])
-# def choose_action(arena_id, character_id):
-#     if arena_id not in arenas:
-#         return jsonify({"error": "Arène non trouvée"}), 404
-
-#     if character_id not in arenas[arena_id]["characters"]:
-#         return jsonify({"error": "Personnage non trouvé dans l'arène"}), 404
-
-#     action = request.json.get('action')
-#     if action not in ["hit", "block", "dodge", "fly"]:
-#         return jsonify({"error": "Action invalide"}), 400
-
-#     # Enregistrer l'action choisie pour le personnage
-#     characters[character_id]["action"] = action
-#     return jsonify({"message": "Action choisie"}), 200
 
 # Démarrer le serveur
 if __name__ == '__main__':
